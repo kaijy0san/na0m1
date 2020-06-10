@@ -1,0 +1,28 @@
+June 10
+ok, so basically it was found that GD roms file structure:
+track1: usual GD-rom bs out of this scope
+track2: usual "this disk should only be used in a naomi/dreamcast/gd rom system" in english or japanese (todo, make recordings in WAV)
+Track3:
+NAOMIGD.BIN (Analogous to 1ST_Read.BIN but shares very little to the end user)
+XYZ.Bin (BXX.BIN?) its the name of the Cartridge bin and its associated CRC32 (to prevent scratched/trojaned games from loading?)
+GAMENAME.BIN, power smash: PS1.bin. starts with NAOMI(space) as a executable header.
+
+so it turns out that most netdimm games floating around on the internet are in complete cleartext, effectively,
+most of the important parts of the naomi crypt are turned off, I have hexedited 1st party binaries and moved them with transfergame with no
+ill effects. such examples are writing in place of the "Only In Japan" warning we all know and love from being arcade game enthusiasts
+a small blurb outlining what just happened.
+replacing INSERT COIN(S) in crazy taxi with any number of "Insert four or 5 letter profanities"
+text replacement in game test mode menu 'you found waldo' (possibly even outright using that to access deeper functions)
+
+hacked netdimm binaries are also possible, the goal is to patch out the GD-check so we may use a GDEMU in place of the aging CF card standard
+also allowing for cabinet side game selection via a simple menu (probably just re-compiled GDMenu) (yay no more pi!)
+
+also allowing for homebrew
+
+wishlist: KOS compiled for naomi, some more proof bins (some 3D, or music), linux, netbsd, retroarch, crossport dreamcast OS or even just games
+
+downport atomiswave games, re-port arcade hits to benefit from GDEMU's immense throughput
+
+open source games, new commercial-grade titles etc etc.
+
+(i am against piracy for direct revenue in all manners, so do what you will but let it rest on your bones).
